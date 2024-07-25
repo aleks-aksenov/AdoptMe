@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Pet from "./Pet";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
 
@@ -14,6 +13,7 @@ const SearchParams = () => {
 
   useEffect(() => {
     requestPets();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animal, location]);
 
   async function requestPets() {
